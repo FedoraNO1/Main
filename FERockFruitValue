@@ -1,0 +1,114 @@
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 42"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 420"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 4200"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 42000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 420000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 42000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 420000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 4200000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 42000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 420000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 42000000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ 420000000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Beli.Main.Text = "$ AbsoluteInfinity"
+----------------------------------- LEVEL ----------------------------
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 42"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 420"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 4200"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 42000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 420000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 42000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 420000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 4200000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 42000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 420000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 42000000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : 420000000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Level.Main.Text = "Level : AbsoluteInfinity"
+------------------------------- DIAMOND --------------------------------
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "42"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "420"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "4200"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "42000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "420000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "42000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "420000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "4200000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "42000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "$420000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "$42000000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "420000000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Value.Diamond.Main.Text = "AbsoluteInfinity"
+------------------------------------------------------------ HEALTH ---------------------------
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 42/42"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 420/420"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 4200/4200"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 42000/42000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 420000/420000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 42000000/42000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 420000000/420000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 4200000000/4200000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 42000000000/42000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 420000000000/420000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 42000000000000/42000000000000"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : 420000000000000/420000000000000"
+wait(0.1)
+if game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text == "Health : 420000000000000/420000000000000" then
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.TextLabel.Text = "Health : AbsoluteInfinity/AbsoluteInfinity"
+game.Players.LocalPlayer.PlayerGui.HUD.Playerhud["Sub_Playerhud"].Bar.HealthBar.Main.Back.Bar:Destroy()
+end
+
+----------- BOUNTY
+
+local RunService = game:GetService("RunService")
+
+RunService.Heartbeat:Connect(function(deltatime)
+game.Players.LocalPlayer.leaderstats.Bounty.Value += 12345678
+end)
