@@ -1,4 +1,4 @@
-local HWID = game.Players:FindFirstChild("MasterTang_HumLek") -- Your Name
+local HWID = game.Players:FindFirstChild("") -- Your Name
 
 local A = [[
 	0
