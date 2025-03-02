@@ -1,5 +1,3 @@
-local HWID = game.Players:FindFirstChild("") -- Your Name
-
 local A = [[
 	0
 	a
