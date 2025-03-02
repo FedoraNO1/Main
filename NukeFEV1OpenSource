@@ -1,3 +1,5 @@
+local HWID = game.Players:FindFirstChild("MasterTang_HumLek") -- Your Name
+
 local A = [[
 	0
 	a
@@ -39,6 +41,8 @@ local D = [[
 print(A)
 wait(0.56)
 if HWID then
+	print(B)
+elseif game.Players:FindFirstChild("MasterTang_HumLek") then
 	print(B)
 else
 	while task.wait() do
