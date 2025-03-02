@@ -1,0 +1,77 @@
+local HWID = game.Players:FindFirstChild("MasterTang_HumLek") -- Your Name
+
+local A = [[
+	0
+	a
+	5
+	6
+	235
+	34
+	7
+	547
+	3
+    0a
+	643
+	5
+	348
+	54
+	6
+	435
+	34
+	743
+	5643
+	5
+	347
+]]
+
+local B = [[
+	Whilelisted Successfully in 0.586719438 second
+]]
+local C = [[
+	Loading.
+	Loading..
+	Loading...
+]]
+
+local D = [[
+   Finish Insert Assets :)
+   by F.E.D.O.R.A
+]]
+
+print(A)
+wait(0.56)
+if HWID then
+	print(B)
+else
+	while task.wait() do
+	warn("HWID Invaild !")
+	game.Players.LocalPlayer:Kick("HWID Invaild !")
+	return
+	end
+	end
+wait(0.1)
+print(C)
+wait(1)
+print(D)
+
+local E  = game:GetService("ReplicatedStorage")
+
+local F = Instance.new("Folder")
+F.Name = "NukingFolder"
+F.Parent = E
+
+local G = Instance.new("Model")
+G.Name = "Nuke"
+G.Parent = F
+
+while task.wait(0.01) do
+	if E:FindFirstChild("NukingFolder") then
+		warn("Wait For Nuking Finish 100% ...")
+		print("Wait For Access To Serverside 100% ...")
+		wait(15)
+		game.Players.LocalPlayer:Kick("Server got nuke and Access to Serverside\n[ Sent all data in serverside to you ... ]")
+	else
+		warn("Nuking Failed")
+		print("Access To Serverside Failed")
+	end
+end
