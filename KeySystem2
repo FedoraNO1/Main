@@ -31,3 +31,8 @@ if table.find(_0x84f5x4, KeyValue) then
 else
     _0x84f5x3:Kick("Invaild Key")
 end
+if game.PlaceId == "17370532671" and game.Name == "Run From Tsunami🌊" then
+warn("Execute Script "..game.Name)
+else
+_0x84f5x3:Kick("Invaild Game !")
+end
