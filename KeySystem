@@ -1,0 +1,34 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+-- ตรวจสอบว่ามีตัวแปร KeyValue ถูกกำหนดหรือไม่
+if not KeyValue then
+    warn("KeyValue is missing!")
+    return -- หยุดการทำงานถ้า KeyValue ไม่ถูกกำหนด
+end
+
+local Key = {
+    "KEY-3IPD-RUD4-4LZ", "KEY-V8WC-AEI9-VXR", "KEY-OV76-6JMA-MBN", "KEY-QHA4-RJP3-CH9",
+    "KEY-MDAT-S7PF-U7F", "KEY-X3R5-XN3W-5LP", "KEY-UHNW-KR0R-MLT", "KEY-YTPG-VEXD-DE1",
+    "KEY-1J3B-JAEB-81E", "KEY-KFB0-329P-L25", "KEY-O36V-0LZJ-BBF", "KEY-FI4K-S3PB-YKX",
+    "KEY-QS1E-GUDS-47Z", "KEY-3TV3-52VR-K4F", "KEY-M478-J8Z1-ZAB", "KEY-8COY-JCN0-C1Y",
+    "KEY-1KW8-3R1C-Q85", "KEY-PYRH-XVB5-PSU", "KEY-EX2G-LS8L-K4S", "KEY-RP67-WGU9-S22"
+}
+
+local Result2Method = KeyValue .. " Whilelisted <3"
+local A = Instance.new("Folder")
+A.Parent = LocalPlayer
+A.Name = "WhilelistedFolder"
+
+local B = Instance.new("BoolValue")
+B.Parent = LocalPlayer.WhilelistedFolder
+B.Name = "Whilelisted"
+B.Value = false
+
+-- ใช้ table.find แทนการตรวจสอบทีละค่า
+if table.find(Key, KeyValue) then
+    LocalPlayer.WhilelistedFolder.Whilelisted.Value = true
+    print(Result2Method)
+else
+    warn("FAILED KEY")
+end
