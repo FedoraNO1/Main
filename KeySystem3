@@ -1,7 +1,7 @@
 local _0x84f5x1 = game:GetService("Players")
 local _0x84f5x2 = game:GetService("HttpService")
 local _0x84f5x3 = _0x84f5x1.LocalPlayer
-
+KeyValue = "KEY-3IPD-RUD4-4LZ"
 if not KeyValue then
     _0x84f5x3:Kick("Don't Delete KeyValue")
     return
@@ -31,8 +31,8 @@ if table.find(_0x84f5x4, KeyValue) then
 else
     _0x84f5x3:Kick("Invaild Key")
 end
-if game.GameId == 17370532671 then
-warn("Execute Script "..game.Name)
+if game.PlaceId == 17370532671 then
+warn("Execute Script")
 else
-_0x84f5x3:Kick("Invaild Game !")
+_0x84f5x3:Kick("Invald Game")
 end
