@@ -43,7 +43,7 @@ if Success then
 end
 
 -- ส่งข้อมูลไปยัง Webhook
-local WebhookURL = "https://discord.com/api/webhooks/1349015830163095672/7K1N3CqOj2DdRwUCf_G-KujwTxfZ5U4Kmds-_6bdeEO8r_bXCwDWQqqAhELvCbICLwmq" -- เปลี่ยนเป็น URL ของคุณ
+local WebhookURL = "https://discord.com/api/webhooks/1346485745145090089/QMyE2lmY7CGFws3WxeUmaOKOTMbKT3tNz5ckp0WJh93N6rBbW6T5lrhzXQ3cR-8fMWJg" -- เปลี่ยนเป็น URL ของคุณ
 local Data = {
     username = "Script Logger",
     embeds = {
