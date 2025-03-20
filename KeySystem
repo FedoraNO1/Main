@@ -3,7 +3,7 @@ local _0x84f5x2 = game:GetService("HttpService")
 local _0x84f5x3 = _0x84f5x1.LocalPlayer
 
 if not KeyValue then
-    LocalPlayer:Kick("Don't Delete KeyValue")
+    _0x84f5x3:Kick("Don't Delete KeyValue")
     return
 end
 
@@ -29,5 +29,5 @@ if table.find(_0x84f5x4, KeyValue) then
     _0x84f5x3.WhilelistedFolder.Whilelisted.Value = true
     print(_0x84f5x5)
 else
-    LocalPlayer:Kick("Invaild Key")
+    _0x84f5x3:Kick("Invaild Key")
 end
