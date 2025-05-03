@@ -1,0 +1,130 @@
+local player = game.Players.LocalPlayer
+local workspace = workspace
+local RunService = game:GetService("RunService")
+local HUGE = math.huge
+
+sethiddenproperty(player, "SimulationRadius", HUGE)
+sethiddenproperty(player, "MaxSimulationRadius", HUGE)
+
+local gui = Instance.new("ScreenGui")
+gui.ResetOnSpawn = false
+gui.Parent = player.PlayerGui
+
+local function createInstance(class, props, parent)
+    local obj = Instance.new(class)
+    for k, v in pairs(props) do
+        obj[k] = v
+    end
+    if parent then obj.Parent = parent end
+    return obj
+end
+
+local frame = createInstance("Frame", {
+    Size = UDim2.fromOffset(120, 180),
+    Position = UDim2.fromScale(0.5, 0.5) - UDim2.fromOffset(60, 90),
+    BackgroundColor3 = Color3.fromRGB(125, 255, 255),
+    Active = true,
+    Draggable = true
+}, gui)
+
+local function createButton(text, pos, color, parent, size)
+    return createInstance("TextButton", {
+        Size = size or UDim2.fromOffset(100, 30),
+        Position = pos,
+        BackgroundColor3 = color,
+        Text = text,
+        TextScaled = true
+    }, parent)
+end
+
+local inputBox = createInstance("TextBox", {
+    Size = UDim2.fromOffset(100, 30),
+    Position = UDim2.fromScale(0.5, 0.3) - UDim2.fromOffset(50, 0),
+    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+    PlaceholderText = "hp%",
+    Text = "",
+    TextScaled = true
+}, frame)
+
+local toggleButton = createButton("เปิด", UDim2.fromScale(0.5, 0.55) - UDim2.fromOffset(50, 0), Color3.new(1, 1, 1), frame)
+local minimizeButton = createButton("ย่อเมนู", UDim2.fromScale(0.5, 0.8) - UDim2.fromOffset(50, 0), Color3.fromRGB(255, 0, 0), frame)
+local openButton = createButton("เปิด", UDim2.fromScale(0.02, 0.02), Color3.fromRGB(125, 255, 125), gui, UDim2.fromOffset(50, 30))
+openButton.Visible = false
+
+local function enableDragging(element)
+    local dragging, startPos, startInput
+    element.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging, startPos, startInput = true, element.Position, input.Position
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+    element.InputChanged:Connect(function(input)
+        if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+            local delta = input.Position - startInput
+            element.Position = UDim2.new(
+                startPos.X.Scale, startPos.X.Offset + delta.X,
+                startPos.Y.Scale, startPos.Y.Offset + delta.Y
+            )
+        end
+    end)
+end
+
+enableDragging(frame)
+enableDragging(openButton)
+
+local isRunning, connection
+
+local function startLoop()
+    connection = RunService.RenderStepped:Connect(function()
+        local inputText = inputBox.Text
+        if inputText == "" then return end
+
+        local hpPercent = tonumber(inputText)
+        if not hpPercent then return end
+
+        local threshold = hpPercent / 100
+
+        for _, desc in ipairs(workspace:GetDescendants()) do
+            if desc:IsA("Humanoid") and desc.Parent.Name ~= player.Name then
+                local humanoid = desc
+                local maxHealth, health = humanoid.MaxHealth, humanoid.Health
+
+                if hpPercent >= 100 or (hpPercent <= 0 and health < maxHealth) or (health <= maxHealth * threshold) then
+                    humanoid.Health = 0
+                end
+            end
+        end
+    end)
+end
+
+local function stopLoop()
+    if connection then
+        connection:Disconnect()
+        connection = nil
+    end
+end
+
+toggleButton.MouseButton1Click:Connect(function()
+    isRunning = not isRunning
+    toggleButton.Text = isRunning and "ปิด" or "เปิด"
+    if isRunning then
+        startLoop()
+    else
+        stopLoop()
+    end
+end)
+
+minimizeButton.MouseButton1Click:Connect(function()
+    frame.Visible = false
+    openButton.Visible = true
+end)
+
+openButton.MouseButton1Click:Connect(function()
+    frame.Visible = true
+    openButton.Visible = false
+end)
